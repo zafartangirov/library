@@ -6,6 +6,7 @@ import java.util.Map;
 public class Library {
     private Map<Integer, Book> books = new HashMap<>();
 
+    // adding book method
     public void addBook(Book book) {
         if (books.containsKey(book.getId())) {
             System.out.println("Already exists: " + book.getId());
@@ -15,6 +16,7 @@ public class Library {
         }
     }
 
+    // get all books method
     public void getAllBooks() {
         if (books.isEmpty()) {
             System.out.println("📚 Library empty.");
@@ -26,6 +28,7 @@ public class Library {
         }
     }
 
+    // get book by id method
     public void getBookById(int id) {
         Book book = books.get(id);
         if (book != null) {
@@ -35,6 +38,7 @@ public class Library {
         }
     }
 
+    // remove book method
     public void removeBook(int id) {
         Book removed = books.remove(id);
         if (removed != null) {
